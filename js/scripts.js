@@ -45,7 +45,7 @@ function getWeatherReport(searchValue){
 		$.ajax({
 			url:"http://api.openweathermap.org/data/2.5/forecast?q="+searchValue+"&apikey="+defaultAppId,
 			dataType:'json',
-			type: 'get',
+			type: 'post',
 			success:function(resultSet){
 				  //** If yout API returns something, you're going to proccess the data here.
 				  updateWeatherReport(resultSet,searchValue);
